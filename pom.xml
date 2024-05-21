@@ -51,6 +51,7 @@ xsi:schemaLocation="https://maven.apache.org/POM/4.0.0 https://maven.apache.org/
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-starter-data-rest</artifactId>
 		</dependency>
+<<<<<<< HEAD
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
@@ -60,6 +61,8 @@ xsi:schemaLocation="https://maven.apache.org/POM/4.0.0 https://maven.apache.org/
 			<artifactId>java-jwt</artifactId>
 			<version>3.4.1</version>
 		</dependency>
+=======
+>>>>>>> 77b4930b6ee211b6f6fbe618b5488f368207ed03
 	</dependencies>
 
 	<build>
