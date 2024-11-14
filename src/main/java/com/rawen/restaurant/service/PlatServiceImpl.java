@@ -89,6 +89,12 @@ RestaurantRepository restaurantRepository;
 	
 		return restaurantRepository.findByStyle(style);
 	}
+	@Override
+	public Style createStyle(Style s) {
+		
+		return restaurantRepository.save(s);
+
+	}
 
 	
 

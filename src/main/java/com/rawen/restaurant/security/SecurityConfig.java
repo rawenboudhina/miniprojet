@@ -42,18 +42,24 @@ public class SecurityConfig {
             }
         }))
 				
-	     .authorizeHttpRequests( requests -> requests
+        .authorizeHttpRequests(
+	     requests -> requests
 			    		  .requestMatchers("/api/all/**").hasAnyAuthority("ADMIN","USER")
 						  .requestMatchers(HttpMethod.GET,"/api/getbyid/**").hasAnyAuthority("ADMIN",
 						  "USER")
 						  .requestMatchers(HttpMethod.POST,"/api/addPlat/**").hasAnyAuthority("ADMIN")
 						  .requestMatchers(HttpMethod.PUT,"/api/updatePlat/**").hasAuthority("ADMIN")
 						  .requestMatchers(HttpMethod.DELETE,"/api/delPlat/**").hasAuthority("ADMIN")
+					        // Nouveau pour les styles
+						  .requestMatchers(HttpMethod.POST,"/api/Style/addStyle/**").hasAnyAuthority("ADMIN")
+
+
+
 						.anyRequest().authenticated() )
 	     
 	     .addFilterBefore(new JWTAuthorizationFilter(),
 				    UsernamePasswordAuthenticationFilter.class);
-		
+
 	return http.build();
 	}
 }

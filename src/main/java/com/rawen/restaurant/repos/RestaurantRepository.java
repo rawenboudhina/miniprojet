@@ -27,6 +27,7 @@ public interface RestaurantRepository extends JpaRepository<Plat, Long> {
 
 	@Query("select p from Plat p order by p.nomPLat ASC, p.prixPLat DESC")
 	List<Plat> trierPlatsNomsPrix ();
+	Style save(Style s);
 
 
 
