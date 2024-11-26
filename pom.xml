@@ -60,6 +60,7 @@ xsi:schemaLocation="https://maven.apache.org/POM/4.0.0 https://maven.apache.org/
 			<artifactId>java-jwt</artifactId>
 			<version>3.4.1</version>
 		</dependency>
+		
 	</dependencies>
 
 	<build>
